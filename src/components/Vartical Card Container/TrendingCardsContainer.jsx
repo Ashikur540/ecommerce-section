@@ -1,8 +1,11 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { trendings } from '../../utils/data';
 import { HorizontalCard } from '../cards/HorizontalCard';
 
 export const TrendingCardsContainer = ({ what, For, whom }) => {
+
+
     const settings = {
         dots: true,
         infinite: true,
@@ -22,7 +25,7 @@ export const TrendingCardsContainer = ({ what, For, whom }) => {
                 {For} {whom}
             </h3>
             <Slider {...settings}>
-                {[1, 2, 3].map(elem => <HorizontalCard key={elem} />)
+                {trendings.map((img, i) => <HorizontalCard key={i} img={img} />)
                 }
             </Slider>
             <div className="flex justify-end p-5 pt-0">

@@ -1,6 +1,5 @@
 import React from 'react';
-import sofa from '../../Assets/Photos/sofa.png';
-export const HorizontalCard = () => {
+export const HorizontalCard = ({ img }) => {
     return (
         <div className="flex flex-col gap-y-2">
             {
@@ -10,7 +9,7 @@ export const HorizontalCard = () => {
                             New
                         </span>
                         <figure className='p-2 my-4  relative pic w-[30%]'>
-                            <img src={sofa} alt="sofa" className="mx-auto my-[50%] w-[100%]" />
+                            <img src={img.img} alt="sofa" className="mx-auto my-[50%] w-[100%]" />
                         </figure>
                         <div className="p-2 flex flex-col">
                             <header className="flex flex-col justify-start items-start gap-2">

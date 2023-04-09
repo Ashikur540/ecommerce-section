@@ -1,9 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
 import salegraphic from '../../Assets/Photos/sale graphic.png';
+import { products } from '../../utils/data';
 import { VerticalFlahCard } from '../cards/VerticalFlahCard';
-
 export const FlashSale = () => {
+
     const settings = {
         dots: false,
         speed: 500,
@@ -61,7 +62,7 @@ export const FlashSale = () => {
                         {/* <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-24 gap-4"> */}
 
                         {
-                            [1, 2, 3, 4, 5, 6, 7, 8, 9].map(elem => <VerticalFlahCard key={elem} />)
+                            products.map((product, i) => <VerticalFlahCard key={i} product={product} />)
                         }
 
                         {/* </div> */}

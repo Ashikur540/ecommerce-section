@@ -45,7 +45,7 @@ export const Navbar = () => {
                                 to={link.url}
                                 aria-label="Our product"
                                 title="Our product"
-                                className={({ isActive }) => isActive ? 'text-purple-800 font-bold' : `font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-purple-accent-400`}
+                                className={({ isActive }) => isActive ? 'text-gold font-bold' : `font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-purple-accent-400`}
                             >
                                 {link.name}
                             </NavLink>
@@ -55,7 +55,7 @@ export const Navbar = () => {
                     <li>
                         <Link
                             to="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-dark hover:bg-purple-700 focus:shadow-outline focus:outline-none"
                             aria-label="Sign up"
                             title="Sign up"
                         >
@@ -86,7 +86,7 @@ export const Navbar = () => {
                         </svg>
                     </button>
                     {isMenuOpen && (
-                        <div className="absolute top-0 left-0 w-full transform ease-linear duration-1000">
+                        <div className="absolute top-0 left-0 w-full transform ease-linear duration-1000 z-[1000]">
                             <div className="p-5 bg-white/80 border rounded shadow-sm  backdrop-blur-sm">
                                 <div className="flex items-center justify-between mb-4 ">
                                     <div>
@@ -143,7 +143,7 @@ export const Navbar = () => {
                                                     to={link.url}
                                                     aria-label="Our product"
                                                     title="Our product"
-                                                    className={({ isActive }) => isActive ? 'text-purple-800 font-bold' : `font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-purple-accent-400`}
+                                                    className={({ isActive }) => isActive ? 'text-gold font-bold' : `font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-purple-accent-400`}
                                                 >
                                                     {link.name}
                                                 </NavLink>
@@ -153,7 +153,7 @@ export const Navbar = () => {
                                         <li>
                                             <Link
                                                 to="/"
-                                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-dark hover:bg-purple-700 focus:shadow-outline focus:outline-none"
                                                 aria-label="Sign up"
                                                 title="Sign up"
                                             >

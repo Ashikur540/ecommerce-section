@@ -1,7 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
-import sofa from '../../Assets/Photos/sofa.png';
-export const VerticalFlahCard = ({ onClick }) => {
+export const VerticalFlahCard = ({ product }) => {
+
+    const { title, img, category, price, sale, notprice } = product
+    console.log(img);
     const settings = {
         dots: true,
         infinite: true,
@@ -17,7 +19,7 @@ export const VerticalFlahCard = ({ onClick }) => {
     return (
         <div className="bg-white max-w-[280px]  border-gray-border group relative border">
             <span className="absolute bg-primary-toned text-center text-red px-2 py-1 rounded-sm left-2 top-2 text-[10px]">
-                New
+                {sale ? "sale" : "New"}
             </span>
             <figure className='p-2 my-4  relative pic'>
                 {/* navigations */}
@@ -25,16 +27,16 @@ export const VerticalFlahCard = ({ onClick }) => {
                 {/* navigations */}
                 <Slider {...settings}>
                     {
-                        [1, 2, 3, 4, 5].map((item, i) => <img src={sofa} alt="sofa" className="mx-auto" key={item} />)
+                        [1, 2, 3, 4, 5].map((item, i) => <img src={img} alt={title} className={`mx-auto  object-cover`} key={item} />)
                     }
 
                 </Slider>
             </figure>
             <div className="p-5 ">
                 <header className="flex flex-col justify-start items-start gap-4 mb-4">
-                    <p className="text-sm text-gray capitalize py-1">Smart TV</p>
+                    <p className="text-sm text-gray capitalize py-1">{category}</p>
                     <h4 className="text-base text-dark capitalize py-1 font-medium">
-                        Sanung 85Q70A 85 Inch QLED 4K UHD Smart LED Television
+                        {title}
                     </h4>
                 </header>
 
@@ -51,22 +53,33 @@ export const VerticalFlahCard = ({ onClick }) => {
                         <p className="text-gray text-sm font-normal tracking-normal pl-1">(5.0)</p>
                     </div>
                     <div className="inline-flex items-center gap-2 group-hover:hidden">
-                        <p className="text-primary font-medium tracking-normal">$ 2036.00</p>
-                        <p className="text-gray text-sm font-normal tracking-normal">$ 3036.00</p>
+                        <p className="text-primary font-medium tracking-normal">$ {price}</p>
+                        <p className="text-gray text-sm font-normal tracking-normal">$ {notprice}.00</p>
                     </div>
                     {/* hover */}
                     <div className="w-full hidden border-y border-gray-border  p-3 group-hover:block">
                         <div className=" grid grid-cols-3 justify-between space-x-3 ">
-                            {
-                                [1, 2, 3].map((item, i) => (
-                                    <div className=" bg-white border-l border-gray-border" key={i}>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mx-auto">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        </svg>
-                                    </div>
-                                ))
-                            }
+
+                            <div className=" bg-white border-l border-gray-border" >
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mx-auto">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div className=" bg-white border-l border-gray-border" >
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+
+                            </div>
+                            <div className=" bg-white border-l border-gray-border" >
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                                </svg>
+
+                            </div>
+
+
                         </div>
                     </div>
                     {/*  */}

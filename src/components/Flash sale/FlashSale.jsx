@@ -18,6 +18,15 @@ export const FlashSale = () => {
             {
                 breakpoint: 2224,
                 settings: {
+                    slidesToShow: 5,
+                    // slidesToScroll: 3,
+                    infinite: false,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 1324,
+                settings: {
                     slidesToShow: 4,
                     // slidesToScroll: 3,
                     infinite: false,

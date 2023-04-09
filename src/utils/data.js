@@ -1,13 +1,13 @@
+import chips from "../Assets/Photos/chips.png";
+import jacket from "../Assets/Photos/jacket.png";
+import kurta from "../Assets/Photos/kurta.png";
 import protin from '../Assets/Photos/protin.png';
 import routerr from "../Assets/Photos/router.png";
 import sofa from '../Assets/Photos/sofa.png';
+import souce from "../Assets/Photos/souce.png";
+import tshirt from "../Assets/Photos/tshirt.png";
 import tws from "../Assets/Photos/tws.png";
 import yellowsofa from "../Assets/Photos/yellow sofa.png";
-import kurta from "../Assets/Photos/kurta.png";
-import tshirt from "../Assets/Photos/tshirt.png";
-import jacket from "../Assets/Photos/jacket.png";
-import chips from "../Assets/Photos/chips.png";
-import souce from "../Assets/Photos/souce.png";
 export const products = [
     {
         category: 'Smart TV',
@@ -39,6 +39,7 @@ export const products = [
         price: 260,
         notprice: 420,
     },
+
     {
         category: 'Cosmetics',
         img: protin,
@@ -46,7 +47,22 @@ export const products = [
         price: 360,
         notprice: 40,
     },
-
+    {
+        sale: true,
+        category: 'Gaming',
+        img: routerr,
+        title: "Lomitech F310 - Wifi & USB RGB Dual Gamepad - for smooth experience",
+        price: 260,
+        notprice: 420,
+    },
+    {
+        sale: true,
+        category: 'Gaming',
+        img: routerr,
+        title: "Lomitech F310 - Wifi & USB RGB Dual Gamepad - for smooth experience",
+        price: 260,
+        notprice: 420,
+    },
 ]
 
 export const trendings = [
